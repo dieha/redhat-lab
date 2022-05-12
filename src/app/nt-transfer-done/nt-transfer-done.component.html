@@ -1,0 +1,50 @@
+<p>nt-transfer-done works!</p>
+
+<div>
+    <mat-form-field>
+        <mat-label>轉出帳號</mat-label>
+        <input type="text" name="formAccountNo" value="{{formAccountNo}}" matInput placeholder="" maxlength="12"
+            readonly>
+    </mat-form-field>
+
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>銀行代碼</mat-label>
+        <input type="text" name="toBankCode" value="{{toBankCode}}" matInput placeholder="" maxlength="3" readonly>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>轉入帳號</mat-label>
+        <input type="text" required name="toAccountNo" value="{{toAccountNo}}" matInput placeholder="" maxlength="12"
+            readonly>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>幣別</mat-label>
+        <input type='text' value="{{currency}}" name="currency" matInput readonly>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>轉帳金額</mat-label>
+        <input type="text" name="amount" value="{{amount}}" matInput placeholder="" readonly>
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field>
+        <mat-label>轉帳日期</mat-label>
+        <input type='text' value="{{transferDate}}" name="transferDate" matInput readonly>
+    </mat-form-field>
+</div>
+<mat-form-field>
+    <mat-label>狀態</mat-label>
+    <input type='text' value="{{status}}" name="currency" matInput readonly>
+</mat-form-field>
+
+<div class="example-button-row">
+
+    <button mat-raised-button color="primary" routerLink="/deposit">確認</button>
+</div>

@@ -1,0 +1,8 @@
+.login-form {
+    height: 200px;
+    width: 400px;
+    position: absolute;     /*絕對位置*/
+    left: 50%;              /*從左邊開始算，右推 50% (一半) 的位置*/
+    margin-left: -200px;    /*寬度的一半*/
+ 
+}

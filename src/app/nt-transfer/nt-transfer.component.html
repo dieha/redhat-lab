@@ -1,0 +1,43 @@
+<p>nt-transfer works!</p>
+<div [formGroup]="transferForm" name="login-form">
+    <div>
+
+        <mat-form-field>
+            <mat-label>轉出帳號</mat-label>
+            <input type="text" name="formAccountNo" matInput placeholder="" formControlName="formAccountNo" maxlength="12"> 
+        </mat-form-field>
+
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>銀行代碼</mat-label>
+            <input type="text" name="toBankCode" matInput placeholder="" formControlName="toBankCode" maxlength="3">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>轉入帳號</mat-label>
+            <input type="text" required name="toAccountNo" matInput placeholder="" formControlName="toAccountNo" maxlength="12">
+        </mat-form-field>
+    </div>
+
+    <div>
+        <mat-form-field>
+            <mat-label>轉帳金額</mat-label>
+            <input type="text" name="amount" matInput placeholder="" formControlName="amount">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field>
+            <mat-label>轉帳日期</mat-label>
+            <input type='datetime-local' name="transferDate" matInput formControlName="transferDate">
+        </mat-form-field>
+    </div>
+    <div>
+        <label>{{msg}}</label>
+    </div>
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="transfer()">確認</button>
+
+        <button mat-raised-button color="primary" routerLink="/deposit">取消</button>
+    </div>

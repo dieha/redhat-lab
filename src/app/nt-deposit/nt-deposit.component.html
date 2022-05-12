@@ -1,0 +1,25 @@
+<div class="deposit">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+    <!-- accountNo Column -->
+    <ng-container matColumnDef="accountNo">
+      <th mat-header-cell *matHeaderCellDef> 帳號 </th>
+      <td mat-cell *matCellDef="let element"> {{element.accountNo}} </td>
+    </ng-container>
+
+    <!-- amount Column -->
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> 餘額</th>
+      <td mat-cell *matCellDef="let element"> {{element.amount| currency:'TWD'}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+  </table>
+  <div class="example-button-row"> 
+    <button mat-raised-button color="primary" routerLink="/transfer">轉帳</button>
+    <button mat-raised-button color="primary" routerLink="/record/{{accountNo}}">交易紀錄查詢</button>
+  </div>
+</div>
